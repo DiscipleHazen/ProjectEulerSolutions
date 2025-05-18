@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Project Euler Solutions">
+        <meta name="author" content="DiscipleHazen">
+        <meta name="keywords" content="Project Euler, Solutions, Programming, Mathematics">
+        <title>Project Euler Solutions</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="styles.css">
+        <script src="projectEulerjs.js"></script>
+        <!-- Prism.js CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+        <!-- Prism.js JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Project Euler Solutions</h1>
+        </header>
+        <main>
+            <section id="solutions">
+                <h2>Solutions</h2>
+                <section id="problem">
+                    <h3 id="problem-number">Problem 1</h3>
+                    <div>
+                    <button id="back" onclick="lastProblem()">Last problem</button>
+                    <button id="next" onclick="nextProblem()">Next Problem</button>
+                    </div>
+                    <h4 id="problem-title">Problem 1: Find the sum of all multiples of 3 or 5 below n</h4>
+                    <p id="description-1">There are two approaches an O(n) (Linear Time Complexity,
+time grows with input size, doubling the input size roughly
+doubles execution time) and an O(1) (Constant time 
+complexity, input size doesn't matter)
+matter)</p>
+                    <p id="description-1.1">Linear Time O(n), iterates through all numbers
+                    <pre id="solution-1-pre"><code id="solution-1" class="language-javascript">
+function multiplesOf3Or5(number) {
+    let sum = 0;
+    for (let i = 0; i < number; i++) {
+        if (i % 3 === 0 || i % 5 === 0) {
+            sum += i;
+        }
+    }
+    return sum;
+}
+console.log(multiplesOf3Or5(1000)); // 233168
+                    </code></pre>
+                    <p id="description-2">Constant Time O(1), directly calculates with a formula
+This function finds the sum of one multiple</p>
+                        <div id="codeblock">
+                            <pre id="solution-2-pre"><code id="solution-2" class="language-javascript">
+function sumDivisibleBy(multiple, n) {
+    let p = Math.floor((n - 1) / multiple);
+    return multiple * (p * (p + 1)) / 2;
+}
+console.log(sumDivisibleBy(3, 1000)); // 166833
+                        </code></pre>
+                        </div>
+                    <p id="description-3">This function adds up the sum of each multiple and then
+subtracts common multiples, to prevent double counting, since
+we are adding up the multiples, we dont want to add up 
+numbers that repeat twice</p>
+                        <div id="codeblock-2">
+                            <pre id="solution-3-pre"><code id="solution-3" class="language-javascript">
+function efficientSumMultiples(n) {
+    return sumDivisibleBy(3, n) + sumDivisibleBy(5, n) 
+    - sumDivisibleBy(15, n);
+}
+console.log(efficientSumMultiples(1000)); // 233168
+                        </code></pre>
+                        </div>
+                        
+                
+                </section>
+                
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 Project Euler Solutions</p>
+        </footer>
+</html>
