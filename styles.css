@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    border: 0;
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    background-image: url("./backgroundSpace.jpg");
+    background-size: cover;
+    background-position: 0 200px;
+    color: rgb(226, 226, 226);
+}
+h1 {
+    box-shadow: 0px 0px 10px #fff;
+    text-shadow: 0px 5px 10px #000;
+    color: whitesmoke;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 25px;
+    padding-top: 20px;
+    background-image: url(./wp10801292-hermetic-wallpapers.jpg);
+    background-size: cover;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h2 {
+    margin-top: 10px;
+    
+    padding: 10px 200px;
+}
+h3 {
+    font-size: 25px;
+}
+section h4 {
+    margin-top: 50px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #ccc;
+}
+
+#solutions {
+    width: 500px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px #000;
+    background-color: rgb(16, 19, 52);
+    padding-bottom: 60px
+}
+#problem p{
+    text-align: left;
+    padding: 5px;
+    width: 90%;
+    display: inline-block;
+    
+}
+pre {
+    white-space: pre-wrap;
+    font-family: monospace;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    margin: auto;
+    width: fit-content;
+    max-width: 100%;
+}
+
+code {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    tab-size: 4;
+}
+
+
+#solution-2 code:empty {
+    display: none !important;
+}
+button {
+    background-color: #378039;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    display: inline-block;
+    box-shadow: 0px 0px 10px #000;
+}
