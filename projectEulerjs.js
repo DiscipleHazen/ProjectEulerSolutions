@@ -59,8 +59,23 @@ function lastProblem() {
     currentProblem--;
     console.log(currentProblem);
     Prism.highlightAll();
+    }   
+}
+
+function dropdownSelect() {
+    let nextProblemValue = parseInt(document.getElementById("problem-select").value) - 1;
+    console.log(nextProblem);
+    if(nextProblemValue > currentProblem) {
+        currentProblem = nextProblemValue - 1;
+        nextProblem();
     }
-    
+    else if(nextProblemValue < currentProblem) {
+        currentProblem = nextProblemValue + 1;
+        lastProblem();
+    }
+    else {
+        console.log("Already on this problem");
+    }
 }
 
 let problems = [
