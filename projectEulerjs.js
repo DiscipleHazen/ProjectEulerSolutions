@@ -166,8 +166,8 @@ factor. Pretty straitforward.`,
         description1: `Raise 10 to n power - 1 to get the smallest number we can
 multiply by, and raise 10 to the n power to get the largest
 nuber we multiply by.
-Take the largest number and multiply it.
-with the largest number incremating downwards.
+Take the largest number and multiply it
+with the largest number incrementing downwards.
 If the product is less than the palindrome found then
 increment down and continue to multiply, setting the number
 we multiply against to the number we increment down to as
