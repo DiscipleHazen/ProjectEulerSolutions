@@ -65,6 +65,8 @@ section h4 {
     word-break: break-word; /* Breaks long words to fit within the container */
     max-width: 90%;
     text-align: justify;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
 }
 #problem {
     max-width: 100%;
