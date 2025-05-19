@@ -57,7 +57,6 @@ section h4 {
     word-wrap: break-word;
 }
 #problem p{
-    text-align: left;
     padding: 5px;
     width: 90%;
     display: inline-block;
@@ -65,6 +64,7 @@ section h4 {
     overflow-wrap: break-word; /* Ensures long text doesn't overflow */
     word-break: break-word; /* Breaks long words to fit within the container */
     max-width: 90%;
+    text-align: justify;
 }
 #problem {
     max-width: 100%;
